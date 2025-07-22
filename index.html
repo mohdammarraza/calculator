@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        input
+        {
+            margin: 8px;
+            width: 100px;
+            padding: 10px;
+        }
+        table input
+        {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center" style="margin-top: 110px;">
+        <form class="p-3 rounded" style="background-color: rgb(238, 238, 238);">
+        <input class="border-0" type="" name="display" id="res" style="width: 462px;">
+        <table>
+        <tr>
+            <td>
+                <input class="btn btn-secondary" type="button" value="AC" onclick="display.value=''">
+                <input class="btn btn-outline-secondary" type="button" value="CE" onclick="display.value=  display.value.toString().slice(0,-1)">
+                <input class="btn btn-outline-secondary" type="button" value="%" onclick="solve('%')">
+                <input class="btn btn-outline-secondary" type="button" value="/" onclick="solve('/')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <input class="btn btn-light" type="button" value="1" onclick="solve('1')">
+            <input class="btn btn-light" type="button" value="2" onclick="solve('2')">
+            <input class="btn btn-light" type="button" value="3" onclick="solve('3')">
+            <input class="btn btn-outline-secondary" type="button" value="x" onclick="solve('*')">
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="btn btn-light" type="button" value="4" onclick="solve('4')">
+                <input class="btn btn-light" type="button" value="5" onclick="solve('5')">
+                <input class="btn btn-light" type="button" value="6" onclick="solve('6')">
+                <input class="btn btn-outline-secondary" type="button" value="-" onclick="solve('-')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="btn btn-light" type="button" value="7" onclick="solve('7')">
+                <input class="btn btn-light" type="button" value="8" onclick="solve('8')">
+                <input class="btn btn-light" type="button" value="9" onclick="solve('9')">
+                <input class="btn btn-outline-secondary" type="button" value="+" onclick="solve('+')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="btn btn-light" type="button" value="00" onclick="solve('00')">
+                <input class="btn btn-light" type="button" value="0" onclick="solve('0')">
+                <input class="btn btn-light" type="button" value="." onclick="solve('.')">
+                <input class="btn btn-primary" type="button" value="=" onclick="display.value = eval(display.value)"> 
+            </td>
+        </tr>
+    </table>
+</form>
+    </div>
+    <script>      
+        function solve(val)    
+        {document.getElementById("res").value+=val;    
+        }      
+        </script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
